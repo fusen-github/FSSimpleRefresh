@@ -17,8 +17,6 @@
 		04FE21821C98448100DA6512 /* FSSimpleRefreshUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21811C98448100DA6512 /* FSSimpleRefreshUITests.m */; };
 		04FE21921C9844CA00DA6512 /* FSRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21911C9844CA00DA6512 /* FSRefreshHeader.m */; };
 		04FE21951C9844DD00DA6512 /* FSRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21941C9844DD00DA6512 /* FSRefreshFooter.m */; };
-		04FE219A1C9844FF00DA6512 /* YiRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21971C9844FF00DA6512 /* YiRefreshFooter.m */; };
-		04FE219B1C9844FF00DA6512 /* YiRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21991C9844FF00DA6512 /* YiRefreshHeader.m */; };
 		04FE219D1C98490500DA6512 /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE219C1C98490500DA6512 /* down@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -60,10 +58,6 @@
 		04FE21911C9844CA00DA6512 /* FSRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRefreshHeader.m; sourceTree = "<group>"; };
 		04FE21931C9844DD00DA6512 /* FSRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRefreshFooter.h; sourceTree = "<group>"; };
 		04FE21941C9844DD00DA6512 /* FSRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRefreshFooter.m; sourceTree = "<group>"; };
-		04FE21961C9844FF00DA6512 /* YiRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshFooter.h; sourceTree = "<group>"; };
-		04FE21971C9844FF00DA6512 /* YiRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshFooter.m; sourceTree = "<group>"; };
-		04FE21981C9844FF00DA6512 /* YiRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshHeader.h; sourceTree = "<group>"; };
-		04FE21991C9844FF00DA6512 /* YiRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshHeader.m; sourceTree = "<group>"; };
 		04FE219C1C98490500DA6512 /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,10 +114,6 @@
 				04FE21601C98448100DA6512 /* AppDelegate.m */,
 				04FE21621C98448100DA6512 /* ViewController.h */,
 				04FE21631C98448100DA6512 /* ViewController.m */,
-				04FE21961C9844FF00DA6512 /* YiRefreshFooter.h */,
-				04FE21971C9844FF00DA6512 /* YiRefreshFooter.m */,
-				04FE21981C9844FF00DA6512 /* YiRefreshHeader.h */,
-				04FE21991C9844FF00DA6512 /* YiRefreshHeader.m */,
 				04FE21651C98448100DA6512 /* Main.storyboard */,
 				04FE21681C98448100DA6512 /* Assets.xcassets */,
 				04FE216A1C98448100DA6512 /* LaunchScreen.storyboard */,
@@ -304,11 +294,9 @@
 			files = (
 				04FE21641C98448100DA6512 /* ViewController.m in Sources */,
 				04FE21921C9844CA00DA6512 /* FSRefreshHeader.m in Sources */,
-				04FE219A1C9844FF00DA6512 /* YiRefreshFooter.m in Sources */,
 				04FE21611C98448100DA6512 /* AppDelegate.m in Sources */,
 				04FE21951C9844DD00DA6512 /* FSRefreshFooter.m in Sources */,
 				04FE215E1C98448100DA6512 /* main.m in Sources */,
-				04FE219B1C9844FF00DA6512 /* YiRefreshHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +522,7 @@
 				04FE21881C98448100DA6512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04FE21891C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +531,7 @@
 				04FE218B1C98448100DA6512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04FE218C1C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefreshUITests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +540,7 @@
 				04FE218E1C98448100DA6512 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
