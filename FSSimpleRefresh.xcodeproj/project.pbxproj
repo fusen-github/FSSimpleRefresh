@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04FE215E1C98448100DA6512 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE215D1C98448100DA6512 /* main.m */; };
+		04FE21611C98448100DA6512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21601C98448100DA6512 /* AppDelegate.m */; };
+		04FE21641C98448100DA6512 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21631C98448100DA6512 /* ViewController.m */; };
+		04FE21671C98448100DA6512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21651C98448100DA6512 /* Main.storyboard */; };
+		04FE21691C98448100DA6512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FE21681C98448100DA6512 /* Assets.xcassets */; };
+		04FE216C1C98448100DA6512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FE216A1C98448100DA6512 /* LaunchScreen.storyboard */; };
+		04FE21771C98448100DA6512 /* FSSimpleRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21761C98448100DA6512 /* FSSimpleRefreshTests.m */; };
+		04FE21821C98448100DA6512 /* FSSimpleRefreshUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21811C98448100DA6512 /* FSSimpleRefreshUITests.m */; };
+		04FE21921C9844CA00DA6512 /* FSRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21911C9844CA00DA6512 /* FSRefreshHeader.m */; };
+		04FE21951C9844DD00DA6512 /* FSRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21941C9844DD00DA6512 /* FSRefreshFooter.m */; };
+		04FE219A1C9844FF00DA6512 /* YiRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21971C9844FF00DA6512 /* YiRefreshFooter.m */; };
+		04FE219B1C9844FF00DA6512 /* YiRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE21991C9844FF00DA6512 /* YiRefreshHeader.m */; };
+		04FE219D1C98490500DA6512 /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04FE219C1C98490500DA6512 /* down@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04FE21731C98448100DA6512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04FE21511C98448100DA6512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04FE21581C98448100DA6512;
+			remoteInfo = FSSimpleRefresh;
+		};
+		04FE217E1C98448100DA6512 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04FE21511C98448100DA6512 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04FE21581C98448100DA6512;
+			remoteInfo = FSSimpleRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04FE21591C98448100DA6512 /* FSSimpleRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FSSimpleRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FE215D1C98448100DA6512 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04FE215F1C98448100DA6512 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04FE21601C98448100DA6512 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04FE21621C98448100DA6512 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04FE21631C98448100DA6512 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04FE21661C98448100DA6512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04FE21681C98448100DA6512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04FE216B1C98448100DA6512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04FE216D1C98448100DA6512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FE21721C98448100DA6512 /* FSSimpleRefreshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSSimpleRefreshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FE21761C98448100DA6512 /* FSSimpleRefreshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSSimpleRefreshTests.m; sourceTree = "<group>"; };
+		04FE21781C98448100DA6512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FE217D1C98448100DA6512 /* FSSimpleRefreshUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FSSimpleRefreshUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04FE21811C98448100DA6512 /* FSSimpleRefreshUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSSimpleRefreshUITests.m; sourceTree = "<group>"; };
+		04FE21831C98448100DA6512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04FE21901C9844CA00DA6512 /* FSRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRefreshHeader.h; sourceTree = "<group>"; };
+		04FE21911C9844CA00DA6512 /* FSRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRefreshHeader.m; sourceTree = "<group>"; };
+		04FE21931C9844DD00DA6512 /* FSRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRefreshFooter.h; sourceTree = "<group>"; };
+		04FE21941C9844DD00DA6512 /* FSRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRefreshFooter.m; sourceTree = "<group>"; };
+		04FE21961C9844FF00DA6512 /* YiRefreshFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshFooter.h; sourceTree = "<group>"; };
+		04FE21971C9844FF00DA6512 /* YiRefreshFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshFooter.m; sourceTree = "<group>"; };
+		04FE21981C9844FF00DA6512 /* YiRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YiRefreshHeader.h; sourceTree = "<group>"; };
+		04FE21991C9844FF00DA6512 /* YiRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YiRefreshHeader.m; sourceTree = "<group>"; };
+		04FE219C1C98490500DA6512 /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04FE21561C98448100DA6512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE216F1C98448100DA6512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE217A1C98448100DA6512 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04FE21501C98448100DA6512 = {
+			isa = PBXGroup;
+			children = (
+				04FE215B1C98448100DA6512 /* FSSimpleRefresh */,
+				04FE21751C98448100DA6512 /* FSSimpleRefreshTests */,
+				04FE21801C98448100DA6512 /* FSSimpleRefreshUITests */,
+				04FE215A1C98448100DA6512 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04FE215A1C98448100DA6512 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04FE21591C98448100DA6512 /* FSSimpleRefresh.app */,
+				04FE21721C98448100DA6512 /* FSSimpleRefreshTests.xctest */,
+				04FE217D1C98448100DA6512 /* FSSimpleRefreshUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04FE215B1C98448100DA6512 /* FSSimpleRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				04FE218F1C9844A700DA6512 /* FSSimpleRefresh */,
+				04FE215F1C98448100DA6512 /* AppDelegate.h */,
+				04FE21601C98448100DA6512 /* AppDelegate.m */,
+				04FE21621C98448100DA6512 /* ViewController.h */,
+				04FE21631C98448100DA6512 /* ViewController.m */,
+				04FE21961C9844FF00DA6512 /* YiRefreshFooter.h */,
+				04FE21971C9844FF00DA6512 /* YiRefreshFooter.m */,
+				04FE21981C9844FF00DA6512 /* YiRefreshHeader.h */,
+				04FE21991C9844FF00DA6512 /* YiRefreshHeader.m */,
+				04FE21651C98448100DA6512 /* Main.storyboard */,
+				04FE21681C98448100DA6512 /* Assets.xcassets */,
+				04FE216A1C98448100DA6512 /* LaunchScreen.storyboard */,
+				04FE216D1C98448100DA6512 /* Info.plist */,
+				04FE215C1C98448100DA6512 /* Supporting Files */,
+			);
+			path = FSSimpleRefresh;
+			sourceTree = "<group>";
+		};
+		04FE215C1C98448100DA6512 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04FE215D1C98448100DA6512 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04FE21751C98448100DA6512 /* FSSimpleRefreshTests */ = {
+			isa = PBXGroup;
+			children = (
+				04FE21761C98448100DA6512 /* FSSimpleRefreshTests.m */,
+				04FE21781C98448100DA6512 /* Info.plist */,
+			);
+			path = FSSimpleRefreshTests;
+			sourceTree = "<group>";
+		};
+		04FE21801C98448100DA6512 /* FSSimpleRefreshUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04FE21811C98448100DA6512 /* FSSimpleRefreshUITests.m */,
+				04FE21831C98448100DA6512 /* Info.plist */,
+			);
+			path = FSSimpleRefreshUITests;
+			sourceTree = "<group>";
+		};
+		04FE218F1C9844A700DA6512 /* FSSimpleRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				04FE219C1C98490500DA6512 /* down@2x.png */,
+				04FE21901C9844CA00DA6512 /* FSRefreshHeader.h */,
+				04FE21911C9844CA00DA6512 /* FSRefreshHeader.m */,
+				04FE21931C9844DD00DA6512 /* FSRefreshFooter.h */,
+				04FE21941C9844DD00DA6512 /* FSRefreshFooter.m */,
+			);
+			path = FSSimpleRefresh;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04FE21581C98448100DA6512 /* FSSimpleRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FE21861C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefresh" */;
+			buildPhases = (
+				04FE21551C98448100DA6512 /* Sources */,
+				04FE21561C98448100DA6512 /* Frameworks */,
+				04FE21571C98448100DA6512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FSSimpleRefresh;
+			productName = FSSimpleRefresh;
+			productReference = 04FE21591C98448100DA6512 /* FSSimpleRefresh.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04FE21711C98448100DA6512 /* FSSimpleRefreshTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FE21891C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefreshTests" */;
+			buildPhases = (
+				04FE216E1C98448100DA6512 /* Sources */,
+				04FE216F1C98448100DA6512 /* Frameworks */,
+				04FE21701C98448100DA6512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04FE21741C98448100DA6512 /* PBXTargetDependency */,
+			);
+			name = FSSimpleRefreshTests;
+			productName = FSSimpleRefreshTests;
+			productReference = 04FE21721C98448100DA6512 /* FSSimpleRefreshTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04FE217C1C98448100DA6512 /* FSSimpleRefreshUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04FE218C1C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefreshUITests" */;
+			buildPhases = (
+				04FE21791C98448100DA6512 /* Sources */,
+				04FE217A1C98448100DA6512 /* Frameworks */,
+				04FE217B1C98448100DA6512 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04FE217F1C98448100DA6512 /* PBXTargetDependency */,
+			);
+			name = FSSimpleRefreshUITests;
+			productName = FSSimpleRefreshUITests;
+			productReference = 04FE217D1C98448100DA6512 /* FSSimpleRefreshUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04FE21511C98448100DA6512 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "四维图新";
+				TargetAttributes = {
+					04FE21581C98448100DA6512 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					04FE21711C98448100DA6512 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 04FE21581C98448100DA6512;
+					};
+					04FE217C1C98448100DA6512 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 04FE21581C98448100DA6512;
+					};
+				};
+			};
+			buildConfigurationList = 04FE21541C98448100DA6512 /* Build configuration list for PBXProject "FSSimpleRefresh" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04FE21501C98448100DA6512;
+			productRefGroup = 04FE215A1C98448100DA6512 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04FE21581C98448100DA6512 /* FSSimpleRefresh */,
+				04FE21711C98448100DA6512 /* FSSimpleRefreshTests */,
+				04FE217C1C98448100DA6512 /* FSSimpleRefreshUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04FE21571C98448100DA6512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE219D1C98490500DA6512 /* down@2x.png in Resources */,
+				04FE216C1C98448100DA6512 /* LaunchScreen.storyboard in Resources */,
+				04FE21691C98448100DA6512 /* Assets.xcassets in Resources */,
+				04FE21671C98448100DA6512 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE21701C98448100DA6512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE217B1C98448100DA6512 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04FE21551C98448100DA6512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE21641C98448100DA6512 /* ViewController.m in Sources */,
+				04FE21921C9844CA00DA6512 /* FSRefreshHeader.m in Sources */,
+				04FE219A1C9844FF00DA6512 /* YiRefreshFooter.m in Sources */,
+				04FE21611C98448100DA6512 /* AppDelegate.m in Sources */,
+				04FE21951C9844DD00DA6512 /* FSRefreshFooter.m in Sources */,
+				04FE215E1C98448100DA6512 /* main.m in Sources */,
+				04FE219B1C9844FF00DA6512 /* YiRefreshHeader.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE216E1C98448100DA6512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE21771C98448100DA6512 /* FSSimpleRefreshTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04FE21791C98448100DA6512 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FE21821C98448100DA6512 /* FSSimpleRefreshUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04FE21741C98448100DA6512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04FE21581C98448100DA6512 /* FSSimpleRefresh */;
+			targetProxy = 04FE21731C98448100DA6512 /* PBXContainerItemProxy */;
+		};
+		04FE217F1C98448100DA6512 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04FE21581C98448100DA6512 /* FSSimpleRefresh */;
+			targetProxy = 04FE217E1C98448100DA6512 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04FE21651C98448100DA6512 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FE21661C98448100DA6512 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04FE216A1C98448100DA6512 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04FE216B1C98448100DA6512 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04FE21841C98448100DA6512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04FE21851C98448100DA6512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04FE21871C98448100DA6512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FSSimpleRefresh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NavInfo.FSSimpleRefresh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04FE21881C98448100DA6512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FSSimpleRefresh/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NavInfo.FSSimpleRefresh;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		04FE218A1C98448100DA6512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FSSimpleRefreshTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NavInfo.FSSimpleRefreshTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSSimpleRefresh.app/FSSimpleRefresh";
+			};
+			name = Debug;
+		};
+		04FE218B1C98448100DA6512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FSSimpleRefreshTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NavInfo.FSSimpleRefreshTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FSSimpleRefresh.app/FSSimpleRefresh";
+			};
+			name = Release;
+		};
+		04FE218D1C98448100DA6512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FSSimpleRefreshUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NavInfo.FSSimpleRefreshUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FSSimpleRefresh;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		04FE218E1C98448100DA6512 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FSSimpleRefreshUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = NavInfo.FSSimpleRefreshUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FSSimpleRefresh;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04FE21541C98448100DA6512 /* Build configuration list for PBXProject "FSSimpleRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FE21841C98448100DA6512 /* Debug */,
+				04FE21851C98448100DA6512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04FE21861C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FE21871C98448100DA6512 /* Debug */,
+				04FE21881C98448100DA6512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04FE21891C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefreshTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FE218A1C98448100DA6512 /* Debug */,
+				04FE218B1C98448100DA6512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		04FE218C1C98448100DA6512 /* Build configuration list for PBXNativeTarget "FSSimpleRefreshUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04FE218D1C98448100DA6512 /* Debug */,
+				04FE218E1C98448100DA6512 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04FE21511C98448100DA6512 /* Project object */;
+}
