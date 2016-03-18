@@ -14,7 +14,7 @@
 
 #define kRefreshFooterRefreshing @"正在加载..."
 
-#define kRefreshFooterHeight 55
+#define kRefreshFooterHeight 60
 
 #define kObserveKey @"contentOffset"
 
@@ -38,6 +38,9 @@
 @property (nonatomic, copy) FSRefreshFooterBlock block;
 
 @property (nonatomic, assign) BOOL isLoading;
+
+/// 是否为全屏。
+@property (nonatomic, assign) BOOL isFilled;
 
 @end
 
@@ -144,58 +147,130 @@
     [self.scrollView addObserver:self
                       forKeyPath:kObserveKey
                          options:NSKeyValueObservingOptionNew context:nil];
-    
 }
 
+/*
+    1、全屏，半屏，
+    2、是否在拖拽
+    3、
+ */
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
-    if (![keyPath isEqualToString:kObserveKey] || self.scrollView.bounds.size.height == 0)
+    if (![keyPath isEqualToString:kObserveKey] ||
+        self.scrollView.bounds.size.height == 0 ||
+        [self.infoLabel.text isEqualToString:kRefreshFooterRefreshing])
     {
         return;
     }
     
-    CGFloat offsetY = [[change objectForKey:@"new"] CGPointValue].y;
+    CGFloat offsetY = [[change objectForKey:@"new"] CGPointValue].y + self.scrollView.contentInset.top;
     
 //    CGFloat criticalY = -(self.footer.bounds.size.height + self.scrollView.contentInset.bottom);
     
     CGFloat criticalY = self.scrollView.contentSize.height - self.scrollView.bounds.size.height;
     
-    if (self.scrollView.isDragging)
+    if (!self.scrollView.isDragging && !self.scrollView.isDecelerating)
     {
-        if (offsetY > criticalY + kRefreshFooterHeight)
+        self.isFilled = (self.scrollView.contentSize.height)-(self.scrollView.bounds.size.height - self.scrollView.contentInset.top - self.scrollView.contentInset.bottom) > 0 ? YES : NO;
+    }
+    
+    if (!self.isFilled) // 非全屏
+    {
+        self.footer.hidden = YES;
+    }
+    else  // 全屏
+    {
+        self.footer.hidden = NO;
+    }
+    
+    if (offsetY <= 0) return;
+    
+    if (self.isFilled) // 全屏
+    {
+        offsetY -= self.scrollView.contentInset.top;
+        
+        if (self.scrollView.isDragging)
         {
-            self.infoLabel.text = kRefreshFooterRelease;
-            
-            [self.infoLabel sizeToFit];
-            
-            self.willLoadMore = YES;
-            
-            [UIView animateWithDuration:0.25 animations:^{
-                self.imageV.transform = CGAffineTransformIdentity;
-            }];
-        }
-        else
-        {
-            if (self.willLoadMore)
+            if (offsetY >= criticalY + kRefreshFooterHeight)
             {
-                self.infoLabel.text = kRefreshFooterTitlePullUp;
+                self.infoLabel.text = kRefreshFooterRelease;
                 
                 [self.infoLabel sizeToFit];
                 
-                self.willLoadMore = NO;
+                self.willLoadMore = YES;
                 
                 [UIView animateWithDuration:0.25 animations:^{
-                    self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
+                    self.imageV.transform = CGAffineTransformIdentity;
                 }];
+            }
+            else
+            {
+                if (self.willLoadMore)
+                {
+                    self.infoLabel.text = kRefreshFooterTitlePullUp;
+                    
+                    [self.infoLabel sizeToFit];
+                    
+                    self.willLoadMore = NO;
+                    
+                    [UIView animateWithDuration:0.25 animations:^{
+                        self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
+                    }];
+                }
+            }
+        }
+        else
+        {
+            if ([self.infoLabel.text isEqualToString:kRefreshFooterRelease])
+            {
+                [self beginRefresh];
             }
         }
     }
-    else
+    else // 非全屏
     {
-        if ([self.infoLabel.text isEqualToString:kRefreshFooterRelease])
+        self.footer.hidden = NO;
+        
+        if (self.scrollView.isDragging)
         {
-            [self beginRefresh];
+            if (offsetY > 30)
+            {
+                if ([self.infoLabel.text isEqualToString:kRefreshFooterTitlePullUp])
+                {
+                    self.infoLabel.text = kRefreshFooterRelease;
+                    
+                    [self.infoLabel sizeToFit];
+                    
+                    self.willLoadMore = YES;
+                    
+                    [UIView animateWithDuration:0.25 animations:^{
+                        self.imageV.transform = CGAffineTransformIdentity;
+                    }];
+                }
+            }
+            else
+            {
+                if (self.willLoadMore)
+                {
+                    self.infoLabel.text = kRefreshFooterTitlePullUp;
+                    
+                    [self.infoLabel sizeToFit];
+                    
+                    self.willLoadMore = NO;
+                    
+                    [UIView animateWithDuration:0.25 animations:^{
+                        self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
+                    }];
+                }
+            }
+        }
+        else
+        {
+            if ([self.infoLabel.text isEqualToString:kRefreshFooterRelease])
+            {
+                [self beginRefresh];
+            }
         }
     }
     
@@ -249,17 +324,36 @@
             
         } completion:^(BOOL finished) {
             
-            self.infoLabel.text = kRefreshFooterTitlePullUp;
+            self.isFilled = (self.scrollView.contentSize.height)-(self.scrollView.bounds.size.height - self.scrollView.contentInset.top - self.scrollView.contentInset.bottom) > 0 ? YES : NO;
             
-            [self.infoLabel sizeToFit];
+            if (self.isFilled)
+            {
+                self.footer.hidden = NO;
+            }else
+            {
+                [UIView animateWithDuration:0.7 animations:^{
+                    self.footer.alpha = 0;
+                } completion:^(BOOL finished) {
+                    
+                    self.footer.alpha = 1;
+                    
+                    self.footer.hidden = YES;
+                    
+                    self.infoLabel.text = kRefreshFooterTitlePullUp;
+                    
+                    [self.infoLabel sizeToFit];
+                    
+                    [self.activity stopAnimating];
+                    
+                    self.activity.hidden = YES;
+                    
+                    self.imageV.hidden = NO;
+                    
+                    self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
+                }];
+            }
             
-            [self.activity stopAnimating];
             
-            self.activity.hidden = YES;
-            
-            self.imageV.hidden = NO;
-            
-            self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
             
         }];
     }

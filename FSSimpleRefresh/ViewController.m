@@ -41,7 +41,7 @@
     
     [footer beginRefreshWithFooterBlock:^{
        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             NSLog(@"完了");
             
@@ -70,7 +70,7 @@
         });
     }];
     
-//    [header beginRefreshWhenViewWillAppear];
+    [header beginRefreshWhenViewWillAppear];
 }
 
 
@@ -93,7 +93,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
