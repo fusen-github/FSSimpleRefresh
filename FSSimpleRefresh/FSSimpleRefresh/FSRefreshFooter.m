@@ -70,8 +70,6 @@
     
     footer.frame = CGRectMake(0, self.scrollView.contentSize.height, self.scrollView.bounds.size.width, kRefreshFooterHeight);
     
-    footer.backgroundColor = [UIColor redColor];
-    
     [self.scrollView addSubview:footer];
     
     
@@ -157,6 +155,14 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context
 {
+    
+    if (self.footer.frame.origin.y != self.scrollView.contentSize.height)
+    {
+        NSLog(@"来了");
+        
+        self.footer.frame = CGRectMake(0, self.scrollView.contentSize.height, self.scrollView.bounds.size.width, kRefreshFooterHeight);
+    }
+    
     if (![keyPath isEqualToString:kObserveKey] ||
         self.scrollView.bounds.size.height == 0 ||
         [self.infoLabel.text isEqualToString:kRefreshFooterRefreshing])
@@ -192,7 +198,7 @@
         
         if (self.scrollView.isDragging)
         {
-            if (offsetY >= criticalY + kRefreshFooterHeight)
+            if (offsetY >= criticalY + kRefreshFooterHeight + self.scrollView.contentInset.bottom)
             {
                 self.infoLabel.text = kRefreshFooterRelease;
                 
@@ -331,6 +337,23 @@
             if (self.isFilled)
             {
                 self.footer.hidden = NO;
+                
+                self.footer.alpha = 1;
+                
+                self.footer.hidden = YES;
+                
+                self.infoLabel.text = kRefreshFooterTitlePullUp;
+                
+                [self.infoLabel sizeToFit];
+                
+                [self.activity stopAnimating];
+                
+                self.activity.hidden = YES;
+                
+                self.imageV.hidden = NO;
+                
+                self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
+                
             }else
             {
                 [UIView animateWithDuration:0.7 animations:^{
@@ -354,9 +377,6 @@
                     self.imageV.transform = CGAffineTransformMakeRotation(M_PI);
                 }];
             }
-            
-            
-            
         }];
     }
 }

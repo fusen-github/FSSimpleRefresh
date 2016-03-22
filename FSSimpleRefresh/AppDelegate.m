@@ -24,19 +24,19 @@
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     
-    self.window.rootViewController = nav;
+//    self.window.rootViewController = nav;
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    
-    [tabBarController addChildViewController:nav];
-    
-    tabBarController.tabBarItem.title = @"123";
     
 //    self.window.rootViewController = vc;
     
 //    self.window.rootViewController = nav;
     
     self.window.rootViewController = tabBarController;
+    
+    [tabBarController addChildViewController:nav];
+    
+    tabBarController.tabBarItem.title = @"123";
     
     [self.window makeKeyAndVisible];
     

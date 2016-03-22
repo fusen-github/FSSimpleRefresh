@@ -69,8 +69,6 @@
 {
     UIView *headView = [[UIView alloc] init];
     
-    headView.backgroundColor = [UIColor redColor];
-    
     self.headView = headView;
     
     headView.frame = CGRectMake(0, -kRefreshHeaderHeight, self.scrollView.bounds.size.width, kRefreshHeaderHeight);
@@ -260,9 +258,13 @@
         
         CGFloat difTop = self.inset2.top - self.inset1.top;
         
+        CGFloat difBottom = self.inset2.bottom - self.inset1.bottom;
+        
         UIEdgeInsets inset = self.originContenInset;
         
         inset.top += difTop;
+        
+        inset.bottom += difBottom;
         
         self.originContenInset = inset;
         

@@ -31,10 +31,9 @@
     
     [self setupTableView];
     
-//    [self setupRefreshHeader];
+    [self setupRefreshHeader];
     
     [self setupRefreshFooter];
-    
 }
 
 - (void)setupRefreshFooter
@@ -74,12 +73,6 @@
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
        
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            
-//            
-//            
-//        });
-        
         [NSThread sleepForTimeInterval:5];
         
         for (int i = 0; i < 5; i++)
@@ -97,10 +90,6 @@
         });
         
     });
-    
-    
-    
-    
 }
 
 
@@ -123,7 +112,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return self.dataArray.count;
+    
+//    return 30;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
