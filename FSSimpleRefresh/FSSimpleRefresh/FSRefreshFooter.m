@@ -326,6 +326,8 @@
             
             self.isFilled = (self.scrollView.contentSize.height)-(self.scrollView.bounds.size.height - self.scrollView.contentInset.top - self.scrollView.contentInset.bottom) > 0 ? YES : NO;
             
+            self.footer.frame = CGRectMake(0, self.scrollView.contentSize.height, self.scrollView.bounds.size.width, kRefreshFooterHeight);
+            
             if (self.isFilled)
             {
                 self.footer.hidden = NO;

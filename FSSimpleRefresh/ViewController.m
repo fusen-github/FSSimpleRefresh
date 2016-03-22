@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) FSRefreshFooter *footer;
 
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation ViewController
@@ -25,9 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.dataArray = [NSMutableArray array];
+    
     [self setupTableView];
     
-    [self setupRefreshHeader];
+//    [self setupRefreshHeader];
     
     [self setupRefreshFooter];
     
@@ -39,15 +43,11 @@
     
     self.footer = footer;
     
+    __weak typeof(self) weakSelf = self;
+    
     [footer beginRefreshWithFooterBlock:^{
        
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-            NSLog(@"完了");
-            
-            [footer endFooterRefreshing];
-            
-        });
+        [weakSelf requestData];
         
     }];
 }
@@ -58,19 +58,49 @@
     
     self.header = header;
     
+     __weak typeof(self) weakSelf = self;
+    
     [header beginRefreshWithHeaderBlock:^{
        
-        NSLog(@"请求网络。。");
+        [weakSelf requestData];
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-            NSLog(@"请求结束...");
-            
-            [self.header endHeaderRefreshing];
-        });
     }];
     
     [header beginRefreshWhenViewWillAppear];
+}
+
+
+- (void)requestData
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+       
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            
+//            
+//            
+//        });
+        
+        [NSThread sleepForTimeInterval:5];
+        
+        for (int i = 0; i < 5; i++)
+        {
+            [self.dataArray addObject:@"fusen"];
+        }
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+           
+            [self.tableView reloadData];
+            
+            [self.header endHeaderRefreshing];
+            
+            [self.footer endFooterRefreshing];
+        });
+        
+    });
+    
+    
+    
+    
 }
 
 
@@ -93,7 +123,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return self.dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
